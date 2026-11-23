@@ -1,6 +1,6 @@
 # Proposed next milestone: hypothetical development scenarios
 
-**Status: proposal only; no scenario extension is implemented.** All amounts and assumptions below are synthetic, created for a reproducible arithmetic example. They are not market estimates or Leadership ATE data. The company has not been represented as testing or adopting this tool.
+**Historical design proposal (retained for reference).** The smaller five-case symmetric comparison is now implemented as Milestone 2A; see `docs/scenarios.md`. The single-plot FAR sensitivity experiments below remain illustrative and are **not** implemented. All amounts and assumptions below are synthetic, created for a reproducible arithmetic example. They are not market estimates or Leadership ATE data. The company has not been represented as testing or adopting this tool.
 
 ## The question
 
