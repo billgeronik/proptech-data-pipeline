@@ -218,3 +218,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# Generated local reports and local-only inputs
+output/
+data/private/

@@ -1,0 +1,5 @@
+{
+  "input_files": ["fixtures/manual_seed.csv"],
+  "output_file": "output/report.csv",
+  "delimiter": ","
+}
