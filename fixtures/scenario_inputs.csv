@@ -1,0 +1,3 @@
+plot_id,plot_area_m2,assumed_far,assumed_saleable_fraction,construction_eur_per_floor_m2,sale_price_eur_per_saleable_m2,land_price_eur,other_costs_eur,assumption_source,assumption_notes
+A,500,1.20,0.80,1800,4000,350000,120000,synthetic exercise,Educational example only
+B,600,1.00,0.80,1750,3900,300000,130000,synthetic exercise,Educational example only

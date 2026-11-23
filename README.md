@@ -173,6 +173,20 @@ Tests cover valid, incomplete, malformed, ambiguous and duplicate data, boolean 
 
 This is a local data-screening tool. Missing evidence remains missing; input sources and dates are not independently authenticated. Duplicate checks are conservative comparisons, not cadastral identity checks. The CSV dialect and number formats above are the supported contract; other formats need explicit conversion.
 
-**Proposed, not implemented:** compare hypothetical development scenarios using explicit FAR, construction-cost, sale-price and separate saleable-area assumptions. See [the checked proposal](docs/scenario_proposal.md). Review that scope before implementation.
+**Historical proposal:** the original scenario design is archived in [docs/scenario_proposal.md](docs/scenario_proposal.md). The smaller five-case implementation is described below; broader FAR sensitivity experiments remain unimplemented.
 
 Gmail, Google Sheets, dashboards, scraping, machine learning, structural analysis and drawing checking are outside this milestone. No external integration is implemented or claimed as tested. No credentials, client records, private plans or company financial records are included.
+
+## Milestone 2A — Five hypothetical development scenarios (implemented)
+
+The original CSV validation pipeline remains available with `python main.py`.
+A separate standard-library command compares **exactly two synthetic plots** under five predefined, symmetric changes to construction costs and assumed sale prices:
+
+```bash
+python -m analysis.scenarios
+python -m unittest discover -s tests -v
+```
+
+Inputs: `fixtures/scenario_inputs.csv`. Generated report: `output/scenario_report.csv`. Checked reference: `fixtures/expected_scenario_report.csv`. The five cases are: base, construction cost +10%, sale price -10%, both adverse changes, and construction cost -10% with sale price +10%. Both plots receive the **same percentage changes** in each case.
+
+All ten synthetic residual results and the arithmetic assumptions are explained in [`docs/scenarios.md`](docs/scenarios.md). This is deterministic **scenario arithmetic**, not legal buildability verification, a formal valuation, actual profit or investment advice. No Gmail, Google Sheets, dashboards, structural analysis, drawings, live market data or company-private information are involved. The earlier [`docs/scenario_proposal.md`](docs/scenario_proposal.md) is preserved as the original pre-implementation proposal and includes exploratory ideas that are **not** implemented.
